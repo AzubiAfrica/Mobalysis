@@ -1,0 +1,47 @@
+.champion-section{
+    background: #191820;
+    margin-top:14rem;
+    width:100%;
+}
+.champion-section .champion-header{
+    display: flex;
+    align-items: center;
+}
+.champion-section .champion-header h2{
+   font-family: 'Work sans';
+   font-size:16px;
+   font-style: italic;
+   font-weight:500;
+   padding:.5rem;
+   color:#fff;
+}
+.champion-section table{
+    width:100%;
+}
+.champion-section table thead th{
+    font-weight:600;
+    font-size:13px;
+    position:relative;
+}
+.champion-section table td span{
+     padding-left: .3rem;
+}
+.champion-section table thead th i{
+    position: absolute;
+    right:0;
+    top:1.2rem;
+}
+.champion-section table thead th .fa-arrow-up{
+    padding-right:.6rem;
+}
+.champion-section table thead th .fa{
+    font-size:10px;
+    font-weight:300;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }

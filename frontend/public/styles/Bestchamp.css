@@ -1,0 +1,39 @@
+.table-section{
+    position:relative;
+    top:8rem;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    background: #191820;
+    width:660px;
+    height:auto;
+    margin: 0 auto;
+    padding:1.5rem;
+   }
+ .table-section h3{
+     font-size: 16px;
+     font-weight: bold;
+     color: #fff;
+     text-align: center;
+ }
+ .table{
+     color:#fff !important;
+ }
+ .role-section{
+    position:relative;
+    top:10rem;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    background: #191820;
+    width:330px;
+    height:auto;
+    margin: 0 auto;
+    padding:1.5rem;
+ }
+ .role-section h3{
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}

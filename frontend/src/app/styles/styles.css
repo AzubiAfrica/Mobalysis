@@ -1,0 +1,19 @@
+/* Global Styles */
+
+:root{
+    --bg_one:#2C2747;
+    --bg_two:#191820;
+    --secondaryBg:#282732;
+    --textColor:#BD9E59;
+    --textColorblue:#2C1DA1;
+    --textLightColor:#8890B5;
+    --borderColor:#302c50;
+  }
+
+body{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
+/*  */

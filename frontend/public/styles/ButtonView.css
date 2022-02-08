@@ -1,0 +1,16 @@
+.button-section{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:1rem;
+    margin-bottom: 1rem;
+  }
+  .btn-view{
+    padding:0.8rem 3.5rem;
+    background:#2C1DA1;
+    border:none;
+    border-radius: 50px;
+    color:#fff;
+    font-size:16px;
+    font-weight:bold;
+  }

@@ -1,0 +1,15 @@
+
+.hist{
+    top:6rem;
+  }
+  .history-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+  }
+  .hist h3{
+    color:#fff;
+    font-size:24px;
+    font-weight:bold;
+  }

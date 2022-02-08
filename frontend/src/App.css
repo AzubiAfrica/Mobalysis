@@ -1,0 +1,1101 @@
+/* ======== UNIT CONVERSION ======= */
+/* 1px = 0.0625rem */
+/*  1px = 0.0625em*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@font-face {
+  font-family: "D-DIN";
+  src: local("D-DIN"), url(./fonts/DDIN/D-DIN.otf) format("truetype");
+}
+
+:root {
+  --bg_one: #2c2747;
+  --bg_two: #191820;
+  --bg_three: #ffffff;
+  --bg_four: #253746;
+  --bg_five: #e5e5e5;
+  --nav-bg: #253746;
+  --secondaryBg: #282732;
+  --textColorblack: #000;
+  --textColor: #bd9e59;
+  --textColorblue: #2c1da1;
+  --textLightColor: #8890b5;
+  --textColorGreenShade: #1dd4ab;
+  --borderColor: #302c50;
+  --textColor2: #0d6efd;
+}
+.hidden line,
+.hidden path {
+  display: none;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: var(--textColorblue);
+}
+.tooltip-info {
+  font-size: 12px !important;
+  background: var(--borderColor) !important;
+  color: #fff;
+  max-width: 20rem !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1 !important;
+  z-index: 1000;
+}
+
+/* ------ NAVIGATION SECTION CSS ------ */
+/* .navbar-sect{
+  position:relative;
+  top:0;
+  margin:0 5rem;
+  background: red !important;
+} */
+.nav-section {
+  position: fixed;
+  z-index: 1;
+  /* width:34.2rem;
+  max-width: 34.2rem; */
+  width: 60%;
+  max-width: 60%;
+}
+
+.nav-section .dropdown-menu {
+  position: absolute;
+  top: 1rem;
+  left: 3rem;
+  background: var(--nav-bg) !important;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  margin-top: 2rem;
+  /* position: relative; */
+}
+.dropdown-menu.champ {
+  /* max-width:20em; */
+  width: 20em;
+  max-height: 20rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  cursor: pointer;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.dropdown-menu.champ .chamFilter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 0.1rem;
+  row-gap: 0.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.dropdown-menu form {
+  position: relative;
+  margin: 0.5rem 0.5rem;
+}
+.dropdown-menu .form-control {
+  padding: 0.2rem 1.5rem;
+  background: var(--secondaryBg) !important;
+  color: #fff !important;
+}
+.dropdown-menu form .searchicon {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.5rem;
+  color: #fff;
+  font-size: 12px;
+  opacity: 0.5;
+}
+.dropdown-menu form input::placeholder {
+  color: #fff;
+  padding-left: 0.2rem;
+  opacity: 0.5;
+  font-size: 12px;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  color: var(--textColor2) !important;
+  background: #fff;
+}
+.nav-table {
+  background: #191820;
+  height: auto;
+  width: 100%;
+}
+.nav-table.active {
+  background: #282732;
+}
+.nav-table.active .dropdown {
+  background: #282732 !important;
+}
+.dropdown {
+  position: relative;
+  background: var(--nav-bg) !important;
+  border-radius: 16px;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dropdown .btn-secondary {
+  background: var(--bg_two) !important;
+  border-radius: 16px;
+  font-size: 13px;
+}
+span.btn-secondary.dropdown-toggle {
+  background: var(--bg_two) !important;
+  border-radius: 15px;
+  font-size: 13px;
+}
+
+.nav-section .dropdown-menu.champ {
+  min-width: 30em !important;
+}
+.nav-section .dropdown-menu .dropdown-item {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 12px 16px;
+}
+.nav-section .dropdown-menu .dropdown-item:hover {
+  background: var(--secondaryBg) !important;
+}
+.nav-section .nav-table table .lastupdate .btn-dark {
+  background: var(--bg_two) !important;
+  border-radius: 16px;
+  border: 0.5px solid #6c757d;
+}
+.nav-section .nav-table table .lastupdate .btn-dark span {
+  font-size: 14px;
+}
+.Navigation-sect {
+}
+.filter-section {
+  position: fixed;
+  z-index: 1;
+  width: 68%;
+  background: var(--bg_four);
+  height: auto;
+  padding: 0.1rem 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.filter-section.active {
+  background: var(--secondaryBg) !important;
+}
+.filter-section .breadcrumb li {
+  cursor: pointer;
+  font-size: 13px;
+  margin-top: 1rem;
+}
+.filter-section .breadcrumb li a {
+  text-decoration: none;
+}
+.back-section .breadcrumb-item.active
+
+/* ------ END of NAV SECTION ------ */
+
+/* ------ BANNER SECTION CSS ------ */
+.champbanner {
+  position: relative;
+  top: 6.5rem;
+  max-width: 100%;
+}
+.champbanner h3 {
+  position: absolute;
+  background: #253746;
+  width: 128px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 16px;
+  color: #fff;
+  font-size: 28px;
+  bottom: 0;
+  left: 1.8rem;
+}
+
+/* ------ CHAMPION CARD SECTION -------- */
+.champions{
+  margin-top: 4rem;
+}
+.mobalysis_champions{
+  margin-top: 2rem;
+}
+.champimg {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.champname {
+  font-family: "D-DIN";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  /* color: #000; */
+  margin-top: 0.8rem;
+}
+.champnick {
+  font-family: "D-DIN";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  margin-top: 1rem;
+  color:var(--nav-bg);
+}
+
+.champsRole {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+/*Container body for components*/
+.champStatComponents {
+  position: relative;
+  margin-top: 5rem;
+  /* margin-bottom: 10rem; */
+  padding: 0rem;
+  background-color: #fff;
+  border-radius: 16px;
+}
+.mobalysis_detials{
+  margin-top:4rem;
+  display:flex;
+  flex-direction: column;
+  background:var(--bg_one);
+  box-shadow: 0 6px 10px rgba(136, 136, 136, 0.5);
+  padding:.2rem 1rem;
+}
+.mobalysis_container{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  column-gap: .5rem;
+}
+.mobalysis_container-banner{
+  flex:0.8;
+  display: flex;
+  flex-direction: column;
+}
+.rate_header{
+  background: #fff;
+  padding:.5rem 1rem;
+  width:100%;
+}
+.mobalysis_container_section-one{
+  margin-top:2rem;
+  display:grid;
+  grid-template-columns:35rem 15rem;
+}
+.mobalysis_container-runes{
+  flex:2;
+  display:
+}
+
+/* ------ RUNES SECTION ------ */
+.RunesSection {
+  font-family: "D-DIN";
+  font-style: normal;
+  position: relative;
+  top: 0rem;
+  background: #CFE2FF;
+  width: 100%;
+  height: auto;
+  padding: 0.1rem;
+  border: none;
+  border-radius: 16px;
+}
+
+.RunesSection h3 {
+  font-size: 11px;
+  color: #000;
+  font-weight: bold;
+  margin: 0rem 0 0 1rem;
+  text-transform: uppercase;
+}
+
+.runestext h3 {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 28px;
+  color: #000;
+}
+
+.RunesSection .RunesContent {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  color: #000;
+}
+.RunesSection .RunesComponents {
+  display: flex;
+  flex-direction: column;
+  flex: 50%;
+  margin-top: 0rem;
+  color: #000;
+}
+
+.RunesComponents {
+  padding: 0.5rem 0rem;
+  margin: 0rem 0.12rem;
+}
+
+.RunesIcons {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.Runesicon img,
+.ShardIcon img {
+  width: 35px;
+  height: 35px;
+}
+.RunesIconText {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: #000;
+  font-size: 13px;
+}
+.RunesIconText .pre {
+  margin-left: 0.3rem;
+}
+.RunesImg {
+  display: grid;
+  row-gap: 1rem;
+  position: relative;
+}
+.RunesImgList,
+.ShardSec {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 1rem;
+  justify-content: center;
+  position: relative;
+}
+.Runesicon {
+  width: 40px;
+  height: 40px;
+  /* border-radius:50%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  position: relative;
+  cursor: help;
+}
+.RunesShards {
+  display: grid;
+  row-gap: 0.2rem;
+  margin-top: 1rem;
+}
+.ShardIcon {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  position: relative;
+  overflow: hidden;
+}
+.Runesicon .selected {
+  opacity: 0.1;
+}
+
+/* ---END OF RUNES CSS */
+
+/* ---SPELLS SECTION ----- */
+.spells-sections {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: #CFE2FF;;
+  width: 100%;
+  height: auto;
+  padding: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0px 2px 2px 1px #d0d0d0;
+}
+.spells-sections .spellsContent {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.spells-sections .Spelltext h3 {
+  font-size: 11px;
+  color: var(--textColorblack);
+  font-weight: bold;
+  margin-top: 0.8rem;
+  text-transform: uppercase;
+}
+/* .spellIcons span{
+  padding-left: .5rem;
+} */
+.spellIcons span img {
+  width: 40px;
+  height: 40px;
+}
+/* END OF SPELLS CSS */
+
+/* ----- ITEMS SECTIONS ----- */
+.items-section {
+  /* display:flex;
+  justify-content: flex-start;
+  align-items: flex-start; */
+  background: #CFE2FF;
+  width: 100%;
+  height: auto;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  margin-right: 0.5rem;
+  border: none;
+  box-shadow: 0px 2px 2px 1px #d0d0d0;
+}
+.items-section .itemsheader h3 {
+  font-size: 11px;
+  color: var(--textColorblack);
+  font-weight: bold;
+  margin-top: 0.8rem;
+  text-transform: uppercase;
+}
+.items-section .itemsContent {
+  display: flex;
+  color: var(--textColorblack);
+}
+.items-section .itemsComponents {
+  width: 100%;
+}
+.itemtext {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 0.1rem;
+  color: var(--textColorblack);
+}
+.itemtext h3,
+.itemtext span {
+  font-size: 11px;
+  font-weight: normal;
+  color: var(--textColorblack);
+}
+.ItemIconSection {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.ItemIconSection p {
+  font-size: 12px;
+  font-weight: normal;
+  color: #fff;
+}
+
+.Itemicons .imgspan,
+.imgspan {
+  display: inline-flex;
+  padding: 0.1rem 0.1rem;
+  /* border: 1px solid var(--textLightColor); */
+  border: none;
+  justify-content: center;
+  align-items: center;
+}
+.Itemicons span img,
+.spellIcons span img {
+  width: 35px;
+  height: 35px;
+}
+.situationalComp {
+  display: flex;
+  flex-direction: column;
+}
+.sitautionImg {
+  display: flex;
+  max-width: 100%;
+  border-bottom: 1px solid var(--borderColor);
+  overflow: auto;
+}
+.SIMG {
+  display: flex;
+  margin: 0 0.8rem 0 0;
+  padding: 0px 0px 0.8rem;
+  transition: opacity 0.15s ease 0s;
+  border-bottom: 2px solid var(--textColorblue);
+  opacity: 1;
+  cursor: pointer;
+}
+.SIMG1 {
+  display: flex;
+  margin: 0 0.8rem 0 0;
+  padding: 0px 0px 0.8rem;
+  transition: opacity 0.15s ease 0s;
+  opacity: 1;
+  cursor: pointer;
+}
+.sitautionText {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem 0px;
+}
+.paraText {
+  color: #fff;
+  font-size: 14px;
+}
+/* ----- END OF ITEMS SECTION CSS */
+
+/* ------ SKILLS ORDER SECTION ------ */
+
+.skill-section {
+  background: #CFE2FF;
+  width: 100%;
+  min-width: 100%;
+  height: auto;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  /* margin-bottom: 0.5rem; */
+  /* border-top: 1px solid var(--borderColor); */
+  border-radius: 16px;
+  box-shadow: 0px 2px 2px 1px #d0d0d0;
+}
+.skillContent {
+  width: 100%;
+}
+.skillHeader {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: bold;
+  height: 2rem;
+  line-height: 2rem;
+  letter-spacing: 0.025rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+.skillHeader h3 {
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--textColorblack);
+}
+.skillalpha {
+  margin-left: 1.2rem;
+}
+.skillalpha .alpha {
+  display: flex;
+  align-items: center;
+}
+.skillalpha .alpha p {
+  font-size: 11px;
+}
+
+.tableResponsive .table {
+  padding-left: 1rem;
+}
+.tableResponsive .table tbody th {
+  font-size: 12px;
+  color: var(--textColorblack);
+  margin-bottom: 0.8rem;
+}
+.tableResponsive .table tbody td {
+  font-size: 12px;
+  padding: 0.5rem 0.2rem;
+}
+.tableResponsive .table .skillCell {
+  color: #ffc306;
+}
+.skillCellw {
+  color: #47cc42;
+}
+.skillCelle {
+  color: #38c6f4;
+}
+.skillCellr {
+  color: #ff2576;
+}
+.skilltexts {
+  background: #2c2747;
+  text-align: center;
+  border-radius: 4px;
+  width: 1.2rem;
+  height: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skillImg p {
+  font-size: 11px;
+  font-weight: normal;
+  color: #fff;
+}
+.skillImgList {
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 2rem; */
+  margin-right: 0.8rem;
+  width: 100%;
+}
+.skillImgList .Img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.skillIcons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.skillIcons .skill_one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 0.3rem;
+  height: 15rem;
+}
+.skillNum {
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  letter-spacing: 0.025rem;
+  color: #6b6889;
+  margin-bottom: 0.2rem;
+}
+.skillLet {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.letterShow {
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  position: relative;
+  transform: translate(0, 0.8rem);
+  background: #2c2747;
+}
+.letterShow.order::before {
+  content: "Q";
+}
+.letterShow::before {
+  display: block;
+  content: "";
+  width: 1px;
+  height: 20rem;
+  background: rgba(255, 255, 255, 0.05);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100%+0.4rem);
+}
+
+/* ----- END SKILL ORDER SECTION ----- */
+
+/* Rate section css */
+.card-rate {
+  position: relative;
+  top: 4rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #191820;
+  width: 100%;
+  height: auto;
+}
+.hist h3 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.chart-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+  width: 100%;
+}
+.chart-section .rate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #282732;
+  /* padding:2rem; */
+}
+
+/* Button View Csss */
+.button-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.btn-view {
+  padding: 0.8rem 3.5rem;
+  background: #2c1da1;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+/* Rate Chart CSS section */
+.card-area {
+  position: relative;
+  top: 4rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #191820;
+  width: 50%;
+  height: auto;
+}
+.pickrate {
+  width: 116px;
+  height: 116px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+/* .card-ratechart h3{
+  text-align: center;
+  color:#fff;
+  font-size: 16px;
+} */
+
+/* ProgressBar section Css */
+.progress-bar.bluecolor {
+  background-color: #0484a7;
+}
+.progress-bar.orangecolor {
+  background-color: #fd4b2d;
+}
+.progress-bar.greencolor {
+  background-color: #00933b;
+}
+
+/* History Section Css */
+.areachart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Counter Section Css */
+.counter-section {
+  position: relative;
+  top: 12rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #191820;
+  width: 100%;
+  height: auto;
+}
+.counter-main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
+}
+.counter-main h4 {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Role Section */
+.best-section {
+  position: relative;
+  top: 0.5rem;
+  background: #191820;
+}
+.table-section {
+  position: relative;
+  /* top:.5rem; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* background: #191820; */
+  width: 100%;
+  height: auto;
+  /* padding:1.5rem 0; */
+}
+.table-section h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+}
+.table-section .table {
+  color: #000 !important;
+  width: 100%;
+}
+.table-section .table th {
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+}
+.table-section .table td {
+  font-size: 12px;
+  font-weight: normal;
+  color: #000;
+}
+.role-section {
+  position: relative;
+  top: 1rem;
+  /* background-color: white; */
+  padding-top: 1rem;
+  /* display:flex;
+  justify-content:center;
+  flex-direction:column;
+  background: #191820;
+  width:100%;
+  height:auto;
+  padding:1.5rem 0; */
+}
+.ratestats {
+  top: 5.8rem;
+}
+
+.tableContainer{
+  border: none;
+  box-shadow: 0 6px 10px rgba(136, 136, 136, 0.5);
+}
+.bestRole {
+  top: 3.5rem;
+}
+.bestchamp {
+  top: 1rem;
+  height: max-content;
+  padding-bottom: 1rem;
+}
+.bestchamp table tbody tr td span {
+  font-size: 10px;
+}
+.bestchamp table{
+  border: none;
+  box-shadow: 0 6px 10px rgba(136, 136, 136, 0.5);
+}
+.role-section .table tbody {
+  font-size: 13px;
+  color: var(--textColorblack);
+}
+.role-section .table thead tr th {
+  font-size: 12px;
+  color: #000;
+}
+.role-section h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+}
+/* KDA Rate SECTION */
+/* .kda-section{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  background: #191820;
+  width:100%;
+  height:auto;
+  padding:.5rem 0;
+}
+.kda-section h2{
+  color:#fff;
+  font-size: 24px;
+  font-weight:bold;
+}
+.kda-section h4{
+  color:#fff;
+  font-size: 16px;
+  font-weight:bold;
+} */
+.pick {
+  color: #0484a7;
+}
+.win {
+  color: #fd4b2d;
+}
+.ban {
+  color: #00933b;
+}
+.axis path,
+.axis line {
+  stroke: white;
+}
+
+.axis text {
+  fill: white;
+}
+
+.grid line {
+  stroke: lightgrey;
+  stroke-opacity: 0.2;
+  shape-rendering: crispEdges;
+}
+.spinner {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 10rem;
+}
+.itemspells {
+  display: grid;
+  /* grid-template-columns:21.25rem 12.875rem; */
+  grid-auto-flow: column;
+  row-gap: 1rem;
+  margin-top: 2rem;
+  border: none;
+  /* background-color: var(--bg_three); */
+  border-radius: 16px;
+}
+/* No Data css */
+.nodata {
+  position: absolute;
+  top: 12rem;
+  left: 50%;
+  right: 50%;
+  background: var(--bg_five) !important;
+  /* margin-left:auto;
+  margin-right: auto; */
+}
+/* Pagination */
+.page-item a.Active{
+  background: #0d6efd !important;
+}
+@media (max-width: 576px) {
+}
+
+@media (max-width: 768px) {
+  .nav-section {
+    width: 100%;
+    min-height: 100%;
+    /* max-width:100%; */
+  }
+  .filter-section {
+    position: relative;
+    width: 100%;
+    background-color: #253746;
+  }
+  .back-section {
+    display: none;
+  }
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .back-section .breadcrumb-item.active {
+    display: none;
+  }
+  .dropdown-menu.champ {
+    /* max-width:5em; */
+    width: 5em;
+    max-height: 20rem;
+    overflow-y: scroll;
+  }
+  .dropdown-menu.champ .chamFilter {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .itemspells {
+    grid-auto-flow: row;
+    margin-top: 0;
+    row-gap: 0;
+  }
+  .champbanner {
+    top: 2rem;
+    border: none;
+  }
+  /* .nav-section{
+      width: 50%;
+      max-width: 50%;
+    } */
+  .RunesSection .RunesContent {
+    justify-content: center;
+  }
+  .RunesIconText .pre {
+    visibility: hidden;
+    display: none;
+  }
+  .Runesicon.active {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+  }
+  .RunesComponents {
+    position: relative;
+  }
+  .RunesImg {
+    position: relative;
+    display: flex;
+    display: block;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 0.2rem;
+  }
+
+  /* .RunesImgList{
+      position: absolute;
+      top:1rem;
+  } */
+  .RunesImgList,
+  .ShardSec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .RunesShards {
+    margin-top: 0.2rem;
+  }
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+  .ratestats {
+    top: 0.6rem;
+  }
+  .bestRole {
+    top: 1rem;
+  }
+  .bestchamp {
+    top: 0.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-section {
+    width: 45%;
+  }
+}
+
+@media (max-width: 1200px) {
+}

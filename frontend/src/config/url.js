@@ -1,0 +1,1 @@
+export const baseUrl = "https://lolbe.azurewebsites.net"

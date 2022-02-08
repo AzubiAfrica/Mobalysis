@@ -1,0 +1,25 @@
+.card-rate{
+    position:relative;
+    top:4rem;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    background: #191820;
+    width:660px;
+    height:auto;
+    margin: 0 auto;
+   }
+   .chart-section{
+     display: grid;
+     grid-template-columns: repeat(2,1fr);
+     column-gap: 2rem;
+     row-gap: 2rem;
+     width: 100%;
+   
+   }
+
+   .card-rate-text{
+    text-align: center;
+    color:#fff;
+    font-size: 16px;
+  }

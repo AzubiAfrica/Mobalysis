@@ -1,0 +1,21 @@
+.card-ratechart{
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+    background: #282732;
+    width:100%;
+    height:auto;
+    padding:1rem 0;
+  }
+  .pickrate{
+    width:116px;
+    height:116px;
+    display:flex;
+    justify-content: center;
+    margin:0 auto;
+  }
+  .card-ratechart h3{
+    text-align: center;
+    color:#fff;
+    font-size: 16px;
+  }

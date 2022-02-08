@@ -1,0 +1,21 @@
+.counter-section{
+    position:relative;
+    top:12rem;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    background: #191820;
+    width:660px;
+    height:auto;
+    margin: 0 auto;
+}
+.counter-main{
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+    margin-top: 1rem;
+}
+h4{
+    color:#fff;
+    font-weight: bold;
+}

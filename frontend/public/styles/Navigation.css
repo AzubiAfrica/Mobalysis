@@ -1,0 +1,27 @@
+.nav-table{
+    background:#191820;
+    height:auto;
+    width:100%;
+}
+.nav-table .dropdown{
+    background:#191820 !important;
+    border-radius: 16px;
+}
+.dropdown-menu{
+    display:none;
+}
+.dropdown.show{
+    display:visible;
+}
+.dropdown-menu.show{
+    display:visible;
+}
+.filter-section{
+    background-color:#191820;
+    width:100%;
+    height:auto;
+    padding:.5rem;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
