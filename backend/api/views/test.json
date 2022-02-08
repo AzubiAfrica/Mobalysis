@@ -1,0 +1,56 @@
+{
+    "data": [
+        {
+            "id": "AatroxQ",
+            "name": "The Darkin Blade",
+            "description": "Aatrox slams his greatsword down, dealing physical damage. He can swing three times, each with a different area of effect.",
+            "image": "https://earlygamestore.z13.web.core.windows.net/dragontail/11.16.1/img/spell/AatroxQ.png",
+            "levels": [
+                1,
+                4,
+                5,
+                7,
+                9
+            ]
+        },
+        {
+            "id": "AatroxW",
+            "name": "Infernal Chains",
+            "description": "Aatrox smashes the ground, dealing damage to the first enemy hit. Champions and large monsters have to leave the impact area quickly or they will be dragged to the center and take the damage again.",
+            "image": "https://earlygamestore.z13.web.core.windows.net/dragontail/11.16.1/img/spell/AatroxW.png",
+            "levels": [
+                3,
+                14,
+                15,
+                17,
+                18
+            ]
+        },
+        {
+            "id": "AatroxE",
+            "name": "Umbral Dash",
+            "description": "Passively, Aatrox heals when damaging enemy champions. On activation, he dashes in a direction.",
+            "image": "https://earlygamestore.z13.web.core.windows.net/dragontail/11.16.1/img/spell/AatroxW.png",
+            "levels": [
+                2,
+                8,
+                10,
+                12,
+                13
+            ]
+        },
+        {
+            "id": "AatroxR",
+            "name": "World Ender",
+            "description": "Aatrox unleashes his demonic form, fearing nearby enemy minions and gaining attack damage, increased healing, and movement speed. If he gets a takedown, this effect is extended.",
+            "image": "https://earlygamestore.z13.web.core.windows.net/dragontail/11.16.1/img/spell/AatroxR.png",
+            "levels": [
+                2,
+                8,
+                10,
+                12,
+                13
+            ]
+        }
+    ]
+}

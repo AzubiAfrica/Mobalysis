@@ -1,0 +1,57 @@
+[
+{
+    "model": "api.regions",
+    "pk": "BR",
+    "fields": {}
+},
+{
+    "model": "api.regions",
+    "pk": "EUNE",
+    "fields": {}
+},
+{
+    "model": "api.regions",
+    "pk": "EUW",
+    "fields": {}
+},
+{
+    "model": "api.regions",
+    "pk": "JP",
+    "fields": {}
+},
+{
+    "model": "api.regions",
+    "pk": "KR",
+    "fields": {}
+},
+{
+    "model": "api.regions",
+    "pk": "LAN",
+    "fields": {}
+},
+{
+    "model": "api.regions",
+    "pk": "LAS",
+    "fields": {}
+},
+{
+    "model": "api.regions",
+    "pk": "NA",
+    "fields": {}
+},
+{
+    "model": "api.regions",
+    "pk": "OCE",
+    "fields": {}
+},
+{
+    "model": "api.regions",
+    "pk": "RU",
+    "fields": {}
+},
+{
+    "model": "api.regions",
+    "pk": "TR",
+    "fields": {}
+}
+]
