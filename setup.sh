@@ -13,3 +13,7 @@ sudo systemctl status postgresql
 # Add user
 sudo useradd mob_db_user
 sudo passwd mob_db_user
+# add OS user
+sudo useradd -m mob_app_usr
+# check for initialization files
+ls -la /home/mob_app_user/
