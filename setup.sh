@@ -5,3 +5,7 @@ sudo -u postgres createuser --interactive
 #insert name of user which is mob_db_user
 ALTER USER mob_db_user PASSWORD 'mob_db_pass';
 #to exit the interactive postgres session, user must type '\q'
+sudo -u postgres createuser --interactive
+#insert name of user which is mob_db_user
+ALTER USER mob_app_usr PASSWORD 'mob_app_pass';
+#to exit the interactive postgres session, user must type '\q'
