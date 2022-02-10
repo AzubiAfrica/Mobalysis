@@ -9,3 +9,5 @@ sudo -u postgres psql -c "ALTER ROLE mob_app_usr WITH password 'mob_app_pass'"
 #sudo -i -u postgress to enter into the postgres session
 #to exit the interactive postgres session, user must type 'exit'
 sudo mkdir mob_app_usr
+cd /home/mob_app_usr
+sudo git clone https://github.com/Gavin-NB/Mobalysis.git
