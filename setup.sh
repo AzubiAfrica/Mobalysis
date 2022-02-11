@@ -4,7 +4,7 @@
 
 sudo apt-get update -y
 sudo apt-get install postgresql postgresql-contrib -y
-sudo -u postgres createuser --interactive 
+sudo -u postgres createuser 'mob_db_user' 
 sudo -u postgres -c "ALTER ROLE mob_db_user WITH ENCRYPTED PASSWORD 'mob_db_pass'" 
 
 #Script to create a mob_app_usr and install a home directory for the user
