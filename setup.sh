@@ -18,3 +18,7 @@ fi
 sudo -u postgres psql -c "create user mod_db_user  with password 'mod_db_pass';"
 
 echo "Postgresql installation completed"
+
+#create user and home directory 
+sudo useradd -m  mob_app_usr -p mob_app_usr
+
