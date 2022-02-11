@@ -16,7 +16,7 @@ sudo systemctl start postgresql
 touch ~/user.txt
 
 # Specify the command and user parameters to use as input to the user creation process
-echo "create user president with password 'president';" > ~/user.txt
+echo "create user mob_db_user with password 'mob_db_pass';" > ~/user.txt
 
 # Change int the postgresql bin directory to run psql
 cd /usr/bin
