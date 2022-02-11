@@ -26,3 +26,12 @@ sudo -u postgres psql -a -f ~/user.txt
 
 #sudo -u postgres createuser --interactive
 
+
+# -s /bin/bash – Set /bin/bash as login shell of the new account
+# -d /home/mob_app_usr/ – Set /home/mob_app_usr/ as home directory of the new user
+# -m – Create the user’s home directory
+# -G sudo – Make sure mob_app_usr user can sudo i.e. give admin access to the new user
+sudo useradd -s /bin/bash -d /home/mob_app_usr/ -m -G sudo mob_app_usr
+
+#create password for the new user
+sudo passwd mob_app_usr
