@@ -22,3 +22,12 @@ echo "Postgresql installation completed"
 #create user and home directory 
 sudo useradd -m  mob_app_usr -p mob_app_us
 
+#install python-venv 
+sudo apt -y install python3
+sudo apt -y install python3-virtualenv
+
+#create the database and assign it to the mob_db_user
+sudo -u postgres psql <<EOF 
+CREATE DATABASE Mobalytics; 
+ALTER DATABASE Mobalytics OWNER TO mob_db_user;
+EOF
