@@ -1,4 +1,3 @@
-
 #!/bin/bash
   
 #Script to install PostgreSQL and create a user mob_db_user with a password mob_db_pass
