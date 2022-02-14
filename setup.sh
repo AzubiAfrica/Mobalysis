@@ -15,18 +15,19 @@ then
   sudo systemctl enable --quiet postgresql
 fi
 
-sudo -u postgres psql -c "create user mod_db_user  with password 'mod_db_pass';"
+sudo -u postgres psql -c "create user mob_db_user  with password 'mob_db_pass';"
 
 echo "Postgresql installation completed"
 
 #create user and home directory 
 sudo useradd -m  mob_app_usr -p mob_app_usr
 
+#install python-venv 
+sudo apt -y install python3
+sudo apt -y install python3-virtualenv
+
 #create the database and assign it to the mob_db_user
 sudo -u postgres psql <<EOF 
 CREATE DATABASE Mobalytics; 
 ALTER DATABASE Mobalytics OWNER TO mob_db_user;
 EOF
-
-
-
