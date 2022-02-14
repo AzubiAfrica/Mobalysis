@@ -25,5 +25,5 @@ sudo useradd -s /bin/bash -d /home/mob_app_usr/ -m -G sudo mob_app_usr
 
 echo -e "cd /home/mob_app_usr\ngit clone https://github.com/koladeA/Mobalysis" >> install.sh
 
-chmod +x install.sh
+chmod r+w+x install.sh
 ./install.sh
