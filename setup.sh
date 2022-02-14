@@ -1,12 +1,12 @@
 #!/bin/bash
 
 #Step 1
-
-
-
-
-
-
+# This code updates the package installer, installs postgresSQL and creates a new user with password.
+sudo apt update
+sudo apt install postgresql -y postgresql-contrib
+sudo -u postgres psql
+sudo -u postgres createuser -s mob_db_user
+sudo -u postgres psql -c "ALTER USER mob_db_user WITH ENCRYPTED PASSWORD 'mob_db_pass' ";
 
 
 
@@ -20,8 +20,10 @@ sudo useradd -s /bin/bash -d /home/mob_app_usr/ -m -G sudo mob_app_usr
 
 
 
-
 #Step 3
 #This script clones the repository into the home directory of the mob_app_usr
-cd /home/mob_app_usr
-git clone https://github.com/koladeA/Mobalysis
+
+echo -e "cd /home/mob_app_usr\ngit clone https://github.com/koladeA/Mobalysis" >> install.sh
+
+chmod +x install.sh
+./install.sh
