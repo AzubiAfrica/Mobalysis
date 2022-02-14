@@ -23,8 +23,7 @@ sudo passwd mob_app_usr
 #Step 3
 #This script clones the repository into the home directory of the mob_app_usr
 
-echo "cd /home/mob_app_usr" \n
-"git clone https://github.com/koladeA/Mobalysis" > install.sh
+echo -e "cd /home/mob_app_usr\ngit clone https://github.com/koladeA/Mobalysis" >> install.sh
 
 chmod +x install.sh
 ./install.sh
