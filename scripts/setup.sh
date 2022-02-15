@@ -17,9 +17,13 @@ sudo -u postgres psql -c "ALTER USER mob_db_user WITH ENCRYPTED PASSWORD 'mob_db
 sudo useradd -s /bin/bash -d /home/mob_app_usr/ -m -G sudo mob_app_usr
 
 
+#This code installs python 3.8 virtual environment
+sudo apt install python3.8-venv
 
-
-
+#This code creates a new database, mobalytics, and assigns it to the user, mob_db_user.
+sudo -u postgres psql
+sudo -u postgres createdb mobalytics
+sudo -u postgres psql -c "alter database seen owner to mob_db_user" ;
 
 
 
