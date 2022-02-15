@@ -1,8 +1,10 @@
 #!/bin/bash
-# Navigate to home directory
-echo "Navigating to home folder"
-cd $HOME
+# Navigate to user home directory
+sys_user="mob_app_usr"
+sys_user_dir=/home/$sys_user
+cd $sys_user_dir
 echo -e "Current directory: $(pwd)\n"
+
 # Check if Mobalysis repo exists - if yes, delete it
 if [[ -f "./Mobalysis" ]]
 then
@@ -10,7 +12,6 @@ then
     rm -rf ./Mobalysis
     echo -e "Deletion complete.\n"
 fi
+
 # Clone Mobalysis repo
-echo -e "Cloning Mobalysis repo\n"
-wget https://github.com/PatProMath/Mobalysis
-echo -e "Finished cloning\n"
+sudo git clone https://github.com/PatProMath/Mobalysis
