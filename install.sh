@@ -1,14 +1,12 @@
 #!/bin/bash
-
+##### NUMBER HERE
 #clone the repository
 git clone https://github.com/President-Banda/Mobalysis.git
 
 #Move project files to mob_app_usr home directory
 sudo mv Mobalysis /home/mob_app_usr/
 
-# remove any previous files
-#rm ~/variables_data_capstone.txt
-
+# SPRINT NUMBER 7 TO EDIT BASHRC AND ENVIRONMENT VARIABLES
 # Create the file
 touch ~/variables.txt
 
@@ -30,3 +28,21 @@ sudo chmod 644 /home/mob_app_usr/.bashrc
 
 # Run the bashrc file
 source /home/mob_app_usr/./.bashrc
+
+##### SPRINT NUMBER 9 TO INSTALL APPLICATION PACKAGES FOR BACKEND
+# Run new migrations
+python3 /backend/manage.py makemigrations
+
+# Install backend migrations
+python3 /backend/manage.py migrate
+
+###### SPRINT NUMBER 9 TO INSTALL APPLICATION PACKAGES FOR BACKEND
+# Create the virtual environment
+virtenv ~/env
+
+# Activate the virtual environment
+source ~/env/bin/activate
+
+# Install application packages
+python3 -m pip install -r backend/requirements.txt
+
