@@ -35,3 +35,18 @@ sudo useradd -s /bin/bash -d /home/mob_app_usr/ -m -G sudo mob_app_usr
 
 #create password for the new user
 sudo passwd mob_app_usr
+
+#Install pip first
+sudo apt-get install python3-pip -y
+
+#install virtualenv using pip3
+pip3 install virtualenv --user
+
+#create a virtual environment
+virtualenv -p python3 myenv
+
+#Active your virtual environment:
+source venv/bin/activate
+
+# create an empty database with the name mobalytics and set the owner of the mobalytics database to mob_db_user
+sudo -u postgres createdb -O mob_db_user mobalytics 
