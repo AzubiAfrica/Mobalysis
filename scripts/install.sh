@@ -15,4 +15,4 @@ sudo chmod +x install.sh
 
 echo -e "DBNAME=mobalytics\nDBUSER=mob_db_user\nDBPASS=mob_db_pass\nDBHOST=localhost\nDBPORT=5432" >> .bashrc
 
-chmod +x .bashrc
+sudo chmod +x .bashrc
