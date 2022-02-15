@@ -2,6 +2,7 @@
 # Navigate to user home directory
 sys_user="mob_app_usr"
 sys_user_dir=/home/$sys_user
+
 cd $sys_user_dir
 echo -e "Current directory: $(pwd)\n"
 
@@ -15,3 +16,13 @@ fi
 
 # Clone Mobalysis repo
 sudo git clone https://github.com/PatProMath/Mobalysis
+
+# Add environment variables to user .bashrc file
+echo "export DBNAME=mobalytics" >> ~/.bashrc
+echo "export DBUSER=mob_db_user" >> ~/.bashrc
+echo "export DBPASS=mob_db_pass" >> ~/.bashrc
+echo "export DBHOST=localhost" >> ~/.bashrc
+echo "export DBPORT=5432" >> ~/.bashrc
+
+# Reinitialise .bashrc file to activate environment variables
+source ~/.bashrc
