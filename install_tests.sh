@@ -28,5 +28,9 @@ sudo cat ~/variables.txt >> /home/mob_app_usr/.bashrc
 # Revert the mode
 sudo chmod 644 /home/mob_app_usr/.bashrc
 
-# Run the bashrc file
+#sudo cp /home/mob_app_usr/.bashrc ~/bashrc
+#cat ~/variables.txt >> ~/bashrc
+#sudo rm /home/mob_app_usr/.bashrc
+#sudo cp ~/bashrc /home/mob_app_usr/.bashrc
+
 source /home/mob_app_usr/./.bashrc
