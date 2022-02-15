@@ -16,3 +16,16 @@ sudo chmod +x install.sh
 echo -e "DBNAME=mobalytics\nDBUSER=mob_db_user\nDBPASS=mob_db_pass\nDBHOST=localhost\nDBPORT=5432" >> .bashrc
 
 sudo chmod +x .bashrc
+
+
+
+#This code installs python 3.8 virtual environment
+sudo apt install python3.8-venv
+ 
+#This code creates the virtual environment
+python3.8 -m venv /home/new/virtualenv
+ 
+#This code activates the virtual environment
+source /home/virtualenv/env/bin/activate
+ 
+
