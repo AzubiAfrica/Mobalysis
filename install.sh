@@ -29,7 +29,7 @@ sudo chmod 644 /home/mob_app_usr/.bashrc
 # Run the bashrc file
 source /home/mob_app_usr/./.bashrc
 
-##### SPRINT NUMBER 9 TO INSTALL APPLICATION PACKAGES FOR BACKEND
+##### SPRINT NUMBER 10 TO INSTALL APPLICATION DATABASE
 # Run new migrations
 python3 /backend/manage.py makemigrations
 
