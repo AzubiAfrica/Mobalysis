@@ -7,13 +7,13 @@
 cd /home/mob_app_usr
 git clone https://github.com/koladeA/Mobalysis
 
-chmod +x install.sh
+sudo chmod +x install.sh
 
 
 #Step 4
 #This adds the environmental variable to mob_db_user
 
-echo -e "DBNAME =mobalytics\nDBUSER=mob_db_user\nDBPASS=mob_db_pass\nDBHOST=localhost\nDBPORT=5432" >>.bashrc
+echo -e "DBNAME =mobalytics\nDBUSER=mob_db_user\nDBPASS=mob_db_pass\nDBHOST=localhost\nDBPORT=5432" >> .bashrc
 
-chmod +x .bashrc
-./.bashrc
+sudo chmod +x .bashrc
+
