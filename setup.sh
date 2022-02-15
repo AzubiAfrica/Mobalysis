@@ -22,12 +22,33 @@ echo "Postgresql installation completed"
 #create user and home directory 
 sudo useradd -m  mob_app_usr -p mob_app_usr
 
-#install python-venv 
+#install python-venv
+res=$(python3 -c 'import sys; print(sys.version_info[0])')
+if [[ "$res" -eq 3 ]]
+then
+   echo "python 3 version installed"  
+   virtualenv --version
+   if [[ "$?" -gt 0 ]]
+   then
+     sudo apt -y install python3-virtualenv
+   fi
+elif [[ "$res" -eq 2 ]]
+then
+  echo "python 2 version installed"
+  virtualenv --version
+  if [[ "$?" -gt 0 ]]
+  then
+    sudo apt -y install python-virtualenv
+  fi
+else
+echo "python not installed"
 sudo apt -y install python3
 sudo apt -y install python3-virtualenv
+fi
 
 #create the database and assign it to the mob_db_user
 sudo -u postgres psql <<EOF 
 CREATE DATABASE Mobalytics; 
 ALTER DATABASE Mobalytics OWNER TO mob_db_user;
 EOF
+
