@@ -13,9 +13,11 @@ echo export DBPORT=\'5432\' >> .bashrc
 sudo -s source ~/.bashrc
 EOF
 
-#Create and Activate Virtual Environment
-sudo -i -u mob_app_usr bash << EOF
-python3 -m venv ~/Mobalysis/venv
-# chmod 700 ~/Mobalysis/venv/bin/activate
-# echo "mob_app_usr" | sudo -S -k whoami
-EOF
+#install pip 
+pip -V
+if [[ $? -gt 0 ]]
+then 
+sudo apt install -y python3-pip
+fi
+# create the virtual env (env), active it, and install necessary app packages
+sudo su - mob_app_usr -c "virtualenv env && . env/bin/activate && pip install -r ./Mobalysis/backend/requirements.txt"
