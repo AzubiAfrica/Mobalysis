@@ -1,3 +1,6 @@
+
+#!/bin/bash
+
 sys_user="mob_app_usr"
 user_dir=/home/$sys_user
 echo "creating user with home directory..."
