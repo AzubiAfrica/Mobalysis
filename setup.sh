@@ -1,33 +1,44 @@
 #!/bin/bash
-sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+# sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 
-wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+# wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 
-sudo apt-get update
+# sudo apt-get update
 
-sudo apt-get -y install postgresql
+# sudo apt-get -y install postgresql
 
-sudo systemctl is-active --quiet  postgresql
+# sudo systemctl is-active --quiet  postgresql
 
-if [ $? -ne 0 ]
-then
-  sudo systemctl start --quiet postgresql
-  sudo systemctl enable --quiet postgresql
-fi
+# if [ $? -ne 0 ]
+# then
+#   sudo systemctl start --quiet postgresql
+#   sudo systemctl enable --quiet postgresql
+# fi
 
-sudo -u postgres psql -c "create user mob_db_user  with password 'mob_db_pass';"
+# sudo -u postgres psql -c "create user mob_db_user  with password 'mob_db_pass';"
 
-echo "Postgresql installation completed"
+# echo "Postgresql installation completed"
 
-#create user and home directory 
-sudo useradd -m  mob_app_usr -p mob_app_us
+# #create user and home directory 
+# sudo useradd -m  mob_app_usr -p mob_app_us
 
-#install python-venv 
-sudo apt -y install python3
-sudo apt -y install python3-virtualenv
+# #install python-venv 
+# sudo apt -y install python3
+# sudo apt -y install python3-virtualenv
 
-#create the database and assign it to the mob_db_user
-sudo -u postgres psql <<EOF 
-CREATE DATABASE Mobalytics; 
-ALTER DATABASE Mobalytics OWNER TO mob_db_user;
+# #create the database and assign it to the mob_db_user
+# sudo -u postgres psql <<EOF 
+# CREATE DATABASE Mobalytics; 
+# ALTER DATABASE Mobalytics OWNER TO mob_db_user;
+# EOF
+
+# #Install Virtualenv
+#sudo su - mob_app_usr -c"pip install virtualenv==20.13.1"
+#sudo apt install python3.8-venv
+
+# #Create and Activate Virtual Environment
+sudo -i -u mob_app_usr bash << EOF
+#python3 -m venv ~/Mobalysis/venvod
+chmod 777 ~/Mobalysis/venv/bin/activate
+. ~/Mobalysis/venv/bin/activate
 EOF
