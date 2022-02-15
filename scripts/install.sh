@@ -19,8 +19,6 @@ sudo chmod +x .bashrc
 
 
 
-#This code installs python 3.8 virtual environment
-sudo apt install python3.8-venv
  
 #This code creates the virtual environment
 python3.8 -m venv /home/new/virtualenv
@@ -28,4 +26,7 @@ python3.8 -m venv /home/new/virtualenv
 #This code activates the virtual environment
 source /home/virtualenv/env/bin/activate
  
-
+#This script install packages
+sudo apt-get install libpq-dev
+sudo apt-get install python3-pip
+pip install psycopg3
