@@ -20,7 +20,7 @@ which python
 python3 -m pip install requests
 
 #leave virtual env
-deativate
+
 
 
 
