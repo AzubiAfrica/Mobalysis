@@ -21,7 +21,7 @@ sudo -u postgres createuser  $dbuser
 sudo -u postgres psql -c "ALTER ROLE $dbuser WITH PASSWORD '$dbpass'"
 
 # adds the system/OS user and makes a home directory for the user
-sudo useradd -d $sys_user_dir $sys_user
+sudo useradd -m $sys_user
 
 sudo -u postgres psql -c "CREATE DATABASE mobalytics";
 
