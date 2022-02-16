@@ -11,11 +11,11 @@ sudo mv Mobalysis /home/mob_app_usr/
 touch ~/variables.txt
 
 # Append data to the file
-echo "DBNAME = mobalytics" > ~/variables.txt
-echo "DBUSER = mob_db_user" >> ~/variables.txt
-echo "DBPASS = mob_db_pass" >> ~/variables.txt
-echo "DBHOST = localshost" >> ~/variables.txt
-echo "DBPORT = 5432" >> ~/variables.txt
+echo "export DBNAME = mobalytics" > ~/variables.txt
+echo "export DBUSER = mob_db_user" >> ~/variables.txt
+echo "export DBPASS = mob_db_pass" >> ~/variables.txt
+echo "export DBHOST = localhost" >> ~/variables.txt
+echo "export DBPORT = 5432" >> ~/variables.txt
 
 # Make bashrc file writeable
 sudo chmod 666 /home/mob_app_usr/.bashrc
