@@ -16,7 +16,7 @@ then
 fi
 
 # Clone Mobalysis repo
-sudo git clone https://github.com/PatProMath/Mobalysis
+sudo git clone https://github.com/PatProMath/Mobalysis.git
 
 # Switch from current user to sys_user -> because we want to run the commands to set the environment variables as the sys_user
 # Altenative: use command below for each line to set variable
