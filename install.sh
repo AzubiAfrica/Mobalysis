@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # To clone into current directory
+cd /home/mob_app_usr
 sudo su -c 'git clone https://github.com/wanguij/Mobalysis.git' - mob_app_usr
 
 # Add environment variables and values to mob_app_usr's bashrc file
