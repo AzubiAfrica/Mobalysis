@@ -9,3 +9,7 @@ virtualenv venv
 
 #command to activate virtual envireoment
 source <venv>/bin/activate
+
+#Command to install the application database
+python3 /home/mob_app_usr/mobalysis/backend/backend/manage.py makemigrations
+python3 /home/mob_app_usr/mobalysis/backend/backend/manage.py migrate
