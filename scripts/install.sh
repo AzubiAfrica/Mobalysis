@@ -16,3 +16,9 @@ sudo chmod +x install.sh
 echo -e "DBNAME=mobalytics\nDBUSER=mob_db_user\nDBPASS=mob_db_pass\nDBHOST=localhost\nDBPORT=5432" >> .bashrc
 
 sudo chmod +x .bashrc
+
+
+#Makes a new migration
+#Installs the backend migration 
+python3 /home/Mobalysis/backend/manage.py makemigrations
+python3 /home/Mobalysis/backend/manage.py migrate
