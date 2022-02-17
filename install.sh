@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # To clone into current directory
-sudo git clone https://github.com/wanguij/Mobalysis.git -mob_app_usr
+cd /home/mob_app_usr
+sudo git clone https://github.com/wanguij/Mobalysis.git 
 
 # Add environment variables and values to mob_app_usr's bashrc file
 sudo echo 'export DBNAME=mobalytics' >> /home/mob_app_usr/.bashrc
