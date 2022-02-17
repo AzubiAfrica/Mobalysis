@@ -29,13 +29,6 @@ sudo chmod 644 /home/mob_app_usr/.bashrc
 # Run the bashrc file
 source /home/mob_app_usr/./.bashrc
 
-##### SPRINT NUMBER 10 TO INSTALL APPLICATION DATABASE
-# Run new migrations
-python3 backend/manage.py makemigrations
-
-# Install backend migrations
-python3 backend/manage.py migrate
-
 ###### SPRINT NUMBER 9 TO INSTALL APPLICATION PACKAGES FOR BACKEND
 # Create the virtual environment
 virtualenv ~/env
@@ -45,4 +38,12 @@ source ~/env/bin/activate
 
 # Install application packages
 python3 -m pip install -r backend/requirements.txt
+
+##### SPRINT NUMBER 10 TO INSTALL APPLICATION DATABASE
+# Run new migrations
+python3 backend/manage.py makemigrations
+
+# Install backend migrations
+python3 backend/manage.py migrate
+
 
