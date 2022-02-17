@@ -11,7 +11,7 @@ sudo echo 'export DBPASS=mob_db_pass' >> /home/mob_app_usr/.bashrc
 sudo echo 'export DBHOST=localhost' >> /home/mob_app_usr/.bashrc 
 sudo echo 'export DBPORT=5432' >> /home/mob_app_usr/.bashrc 
 
-#Execute the bashrc file
+#Execute changes to the current session of the bashrc file
 sudo source .bashrc
 
 #Script to create a virtual enviroment env, activate virtual enviroment 
