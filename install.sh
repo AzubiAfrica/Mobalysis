@@ -31,14 +31,14 @@ source /home/mob_app_usr/./.bashrc
 
 ##### SPRINT NUMBER 10 TO INSTALL APPLICATION DATABASE
 # Run new migrations
-python3 /backend/manage.py makemigrations
+python3 backend/manage.py makemigrations
 
 # Install backend migrations
-python3 /backend/manage.py migrate
+python3 backend/manage.py migrate
 
 ###### SPRINT NUMBER 9 TO INSTALL APPLICATION PACKAGES FOR BACKEND
 # Create the virtual environment
-virtenv ~/env
+virtualenv ~/env
 
 # Activate the virtual environment
 source ~/env/bin/activate
