@@ -40,17 +40,17 @@ sudo passwd mob_app_usr
 sudo apt-get install python3-pip -y
 
 #install virtualenv using pip3
-pip3 install virtualenv --user
+#pip3 install virtualenv --user
+sudo apt-get install python3-virtualenv
 
 #create a virtual environment
-virtualenv -p python3 myenv
-
-# virtualenv ~/.environment
+#virtualenv -p python3 myenv
+virtualenv ~/.environment
 
 
 #Active your virtual environment:
-source venv/bin/activate
+#source venv/bin/activate
+source ~/.environment/bin/activate
 
-# source ~/environment/bin/activate
 # create an empty database with the name mobalytics and set the owner of the mobalytics database to mob_db_user
 sudo -u postgres createdb -O mob_db_user mobalytics 
