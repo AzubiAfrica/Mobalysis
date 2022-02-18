@@ -12,6 +12,7 @@ from api.models.regions import regions
 from api.models.items import item
 from api.models.runes import Rune
 from api.models.runes_path import RunePath
+from api.models.rune_page import RunePage
 from api.models.spells import Spell
 from api.models.item_match_performance import item_match_performance
 from api.models.spell_match_performance import spell_match_performance
@@ -203,7 +204,21 @@ class RuneMatchPerformanceAdmin(admin.ModelAdmin):
         "gameMode",
         "champLevel",
     )
-
+class RunePageAdmin(admin.ModelAdmin):
+    list_display = (
+        "rune_page_id",
+        "primary_style",
+        "key_stone",
+        "primary_perk0_1",
+        "primary_perk0_2",
+        "primary_perk0_3",
+        "shard1",
+        "shard2",
+        "shard3",
+        "secondary_style",
+        "secondary_perk0_1",
+        "secondary_perk0_2",
+    )
 
 class ItemPropertyAdmin(admin.ModelAdmin):
     list_display = (
@@ -245,6 +260,7 @@ admin.site.register(tier, TierAdmin)
 admin.site.register(regions, RegionsAdmin)
 admin.site.register(item, ItemAdmin)
 admin.site.register(Rune, RuneAdmin)
+admin.site.register(RunePage, RunePageAdmin)
 admin.site.register(RunePath, RunePathAdmin)
 admin.site.register(Spell, SpellAdmin)
 admin.site.register(item_match_performance, ItemMatchPerformanceAdmin)

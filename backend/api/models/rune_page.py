@@ -103,9 +103,9 @@ class RunePage(models.Model):
         related_name="+",
     )
 
-    class Meta:
-        managed = False
-        db_table = "rune_pages"
+    # class Meta:
+    #     managed = False
+    #     db_table = "rune_pages"
 
     def __str__(self):
         return f"""{self.rune_page_id}"""
