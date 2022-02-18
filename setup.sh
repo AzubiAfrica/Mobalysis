@@ -20,3 +20,16 @@ sudo -u postgres psql -c "ALTER USER mob_db_user WITH ENCRYPTED PASSWORD 'mob_db
 
 sudo useradd -s /bin/bash -d /home/mob_app_usr/ -m -G sudo mob_app_usr
 
+#step 5: 
+
+#this script install python3-venv/ 
+sudo yum install python3.8-venv
+
+
+#this script creates an empty database with the name mobalytics/assigns ownership to mob_db_user
+
+sudo -u postgres psql
+sudo -u postgres createdb mobalytics
+sudo -u postgres psql -c "alter database seen owner to mob_db_user";
+
+
