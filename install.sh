@@ -15,5 +15,21 @@ echo -e "DBNAME=mobalytics\nDBUSER=mob_db_user\nDBPASS=mob_db_pass\nDBHOST=local
 sudo chmod +x .bashrc
 
 
+#step 6. create /activate virtual environment and install its packages
+
+#This script creates the virtual environment
+
+python3.8 -m venv /home/new/virtualenv
 
 
+#This scripts activates the virtual environment
+
+source /home/virtualenv/env/bin/activate
+
+
+
+#This script Installs application packages in venv
+
+sudo yum install libpq-dev
+sudo yum install python3-pip
+pip install psycopg3
