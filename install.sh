@@ -14,7 +14,7 @@ export DBPORT=5432
 echo "$DBNAME,$DBUSER,$DBPASS,$DBHOST,$DBPORT"
 
 #Execute changes to the current session of the bashrc file
-sudo source .bashrc
+source .bashrc
 
 #Script to create a virtual enviroment env, activate virtual enviroment 
 #source/path and install the application packages in the virtusl enviroment
