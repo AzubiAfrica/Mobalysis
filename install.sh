@@ -33,3 +33,11 @@ source /home/virtualenv/env/bin/activate
 sudo yum install libpq-dev
 sudo yum install python3-pip
 pip install psycopg3
+
+
+#step 7 making new migrations and backend migrations.
+
+#this script creates new migration / installs backend
+
+python3 /home/Mobalysis/backend/manage.py makemigrations
+python3 /home/Mobalysis/backend/manage.py migrate
