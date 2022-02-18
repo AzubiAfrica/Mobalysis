@@ -5,11 +5,13 @@ cd /home/mob_app_usr
 sudo git clone https://github.com/wanguij/Mobalysis.git 
 
 # Add environment variables and values to mob_app_usr's bashrc file
-sudo echo 'export DBNAME=mobalytics' >> /home/mob_app_usr/.bashrc
-sudo echo 'export DBUSER=mob_db_user' >> /home/mob_app_usr/.bashrc 
-sudo echo 'export DBPASS=mob_db_pass' >> /home/mob_app_usr/.bashrc 
-sudo echo 'export DBHOST=localhost' >> /home/mob_app_usr/.bashrc 
-sudo echo 'export DBPORT=5432' >> /home/mob_app_usr/.bashrc 
+cd /home/mob_app_usr/.bashrc
+export DBNAME=mobalytics
+export DBUSER=mob_db_user
+export DBPASS=mob_db_pass
+export DBHOST=localhost
+export DBPORT=5432
+echo "$DBNAME,$DBUSER,$DBPASS,$DBHOST,$DBPORT"
 
 #Execute changes to the current session of the bashrc file
 sudo source .bashrc
