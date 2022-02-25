@@ -12,8 +12,8 @@ sudo chmod +x install.sh
 
 #Step 4
 #This adds the environmental variable to mob_db_user
-
-echo -e "DBNAME=mobalytics\nDBUSER=mob_db_user\nDBPASS=mob_db_pass\nDBHOST=localhost\nDBPORT=5432" >> .bashrc
+cd ~/ubuntu
+echo -e "EXPORT DBNAME=mobalytics\nEXPORT DBUSER=mob_db_user\nEXPORT DBPASS=mob_db_pass\nEXPORT DBHOST=localhost\nEXPORT DBPORT=5432" >> .bashrc
 
 sudo chmod +x .bashrc
 
