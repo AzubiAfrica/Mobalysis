@@ -5,8 +5,7 @@
 # This code updates the package installer, installs postgresSQL and creates a new user with password.
 sudo apt update
 sudo apt install postgresql -y postgresql-contrib
-sudo -u postgres psql
-sudo -u postgres createuser -s mob_db_user
+sudo -u postgres psql -c "CREATE USER mob_db_user";
 sudo -u postgres psql -c "ALTER USER mob_db_user WITH ENCRYPTED PASSWORD 'mob_db_pass' ";
 
 
@@ -19,12 +18,11 @@ sudo useradd -s /bin/bash -d /home/mob_app_usr/ -m -G sudo mob_app_usr
 
 
 #This code installs python 3.8 virtual environment
-sudo apt install python3.8-venv
+sudo apt install python3.8-venv -y
 
 #This code creates a new database, mobalytics, and assigns it to the user, mob_db_user.
-sudo -u postgres psql
-sudo -u postgres createdb mobalytics
-sudo -u postgres psql -c "alter database seen owner to mob_db_user" ;
+sudo -u postgres psql -c "create database mobalytics";
+sudo -u postgres psql -c "alter database mobalytics owner to mob_db_user" ;
 
 
 
