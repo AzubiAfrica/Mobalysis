@@ -44,13 +44,13 @@ python3 /home/mob_app_usr/Mobalysis/backend/backend/manage.py migrate
 sudo touch frontenddeploy.sh
 
 #update ubuntu instance
-sudo -u apt-get update >> /home/mob_app_usr/frontenddeploy.sh
+echo "sudo -u apt-get update" >> /home/mob_app_usr/frontenddeploy.sh
 
 #update ubuntu system
-sudo -u apt-get upgrade >> /home/mob_app_usr/frontenddeploy.sh
+echo "sudo -u apt-get upgrade" >> /home/mob_app_usr/frontenddeploy.sh
 
 #install nginx
-sudo -u apt-get install nginx-y >> /home/mob_app_usr/frontenddeploy.sh
+echo "sudo -u apt-get install nginx -y" >> /home/mob_app_usr/frontenddeploy.sh
 
 #nginx version
-sudo -u nginx-v 
+echo "sudo -u nginx -v" >> /home/mob_app_user/frontenddeploy.sh
