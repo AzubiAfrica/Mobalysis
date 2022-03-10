@@ -39,3 +39,18 @@ deactivate
 #Command to install the application database
 python3 /home/mob_app_usr/Mobalysis/backend/backend/manage.py makemigrations
 python3 /home/mob_app_usr/Mobalysis/backend/backend/manage.py migrate
+
+#create frontenddeploy.sh
+sudo touch frontenddeploy.sh
+
+#update ubuntu instance
+sudo apt-get update
+
+#update ubuntu system
+sudo apt-get upgrade
+
+#install nginx
+sudo apt-get install nginx-y
+
+#nginx version
+sudo nginx-v
