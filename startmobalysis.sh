@@ -1,17 +1,16 @@
-#!/bin/bash 
-sudo su
-apt-get update
+#!/bin/bash
+sudo apt-get update
 
-#install  curl  
-apt-get install curl
+#install  curl
+sudo apt-get install curl
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
-#install nginx 
-apt-get install nginx -y
+#install nginx
+sudo apt-get install nginx -y
 
 
-#install node.js 
-apt-get install -y nodejs
+#install node.js
+sudo apt-get install -y nodejs
 
 cd /var/www/html/
 
@@ -20,14 +19,15 @@ sudo git clone https://github.com/sdg000/Mobalysis.git
 
 #cd into frontend to install and run npm
 cd Mobalysis/frontend
+
 npm install
 npm run build
 
 
-#copy all files in  frontend/build to /var/www/html 
+#copy all files in  frontend/build to /var/www/html
 #remove original html file from nginx
-cp -r /var/www/html/Mobalysis/frontend/build/* /var/www/html
-rm -rf index.nginx.debian.html
+sudo cp -r /var/www/html/Mobalysis/frontend/build/* /var/www/html
+sudo rm -rf index.nginx.debian.html
 
 #restart nginx
-systemctl restart nginx
+sudo systemctl restart nginx
