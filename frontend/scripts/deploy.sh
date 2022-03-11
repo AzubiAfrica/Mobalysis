@@ -3,3 +3,5 @@ sudo apt-get update
 
 #Upgrade ubuntu
 sudo apt-get upgrade -y
+
+# Update the code
