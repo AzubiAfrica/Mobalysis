@@ -2,10 +2,10 @@
 
 
 
-#Create the react app inside /var/www/html directory and run it
+#Deploy the react app inside /var/www/html directory and run it
 sudo cd /var/www/html
-sudo npx create-react-app react-project
-sudo cd react-project
+sudo git clone https://github.com/wanguij/Mobalysis
+sudo cd Mobalysis/frontend
 sudo npm start 
 sudo npm run build 
 
