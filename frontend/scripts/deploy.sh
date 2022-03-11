@@ -4,4 +4,13 @@ sudo apt-get update
 #Upgrade ubuntu
 sudo apt-get upgrade -y
 
-# Update the code
+#install ngnix
+sudo apt-get install nginx -y
+
+
+#nginx version
+nginx -v
+
+
+#restart nginx
+sudo systemctl restart nginx
