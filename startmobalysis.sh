@@ -1,4 +1,4 @@
-#elevate privelleges and update system os 
+#!/bin/bash 
 sudo su
 apt-get update
 
