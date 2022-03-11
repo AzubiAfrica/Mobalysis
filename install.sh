@@ -3,7 +3,7 @@
 #Step 3 creating install.sh (clones the repository into the home directory of the mob_app_usr) VERONICA
 
 cd /home/mob_app_usr
-git clone https://github.com/sdg000/Mobalysis
+sudo git clone https://github.com/sdg000/Mobalysis
 
 sudo chmod +x install.sh
 
@@ -30,8 +30,8 @@ source /home/virtualenv/env/bin/activate
 
 #This script Installs application packages in venv
 
-sudo yum install libpq-dev
-sudo yum install python3-pip
+sudo apt-get install libpq-dev
+sudo apt-get install python3-pip
 pip install psycopg3
 
 

@@ -2,8 +2,8 @@
 
 #Step 1.  setup.sh This code updates the package installer, installs postgresSQL and creates a new user with password.
 
-sudo yum update -y
-sudo yum install postgresql -y postgresql-contrib
+sudo apt-get update
+sudo apt-get install postgresql -y postgresql-contrib
 sudo systemctl start postgresql
 sudo -u postgres createuser -s mob_db_user
 sudo -u postgres psql -c "ALTER USER mob_db_user WITH ENCRYPTED PASSWORD 'mob_db_pass';"
@@ -23,7 +23,7 @@ sudo useradd -s /bin/bash -d /home/mob_app_usr/ -m -G sudo mob_app_usr
 #step 5: 
 
 #this script install python3-venv/ 
-sudo yum install python3.8-venv
+sudo apt-get install python3.8-venv
 
 
 #this script creates an empty database with the name mobalytics/assigns ownership to mob_db_user
