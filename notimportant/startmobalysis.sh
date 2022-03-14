@@ -20,8 +20,8 @@ sudo git clone https://github.com/sdg000/Mobalysis.git
 #cd into frontend to install and run npm
 cd Mobalysis/frontend
 
-npm install
-npm run build
+sudo npm install
+sudo npm run build
 
 
 #copy all files in  frontend/build to /var/www/html
