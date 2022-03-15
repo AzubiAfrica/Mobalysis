@@ -9,7 +9,7 @@ sudo bash nodesource_setup.sh
 #install NodeJs 
 sudo apt install nodejs
 
-if [ $? eq  0]
+if [ $? -eq  0 ]
 then
   echo "NodeJS successfully created"
 else
@@ -18,7 +18,7 @@ fi
 
 #install Nginx
 sudo apt -y install nginx
-if [ $? eq  0]
+if [ $? -eq  0 ]
 then
   echo "Nginx installed sucessfully"
 else
