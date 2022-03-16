@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/bin/bash
 
 # Navigate to user home directory
