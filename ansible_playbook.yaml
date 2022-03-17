@@ -1,0 +1,11 @@
+- hosts: web
+  remote_user: root
+  become: yes
+  tasks:
+  #test server with apache installation
+  - name: install Apache
+    apt: name=apache2 update_cache=yes state=latest
+  #you may add your tasks below
+
+#ansible-playbook -i ansible_aws.ini ansible_playbook.yaml
+#ansible-playbook -i ansible_aws.ini ansible_playbook.yaml
