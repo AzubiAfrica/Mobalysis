@@ -1,11 +1,21 @@
+---
 - hosts: web
   remote_user: root
   become: yes
+
   tasks:
-  #test server with apache installation
-  - name: install Apache
-    apt: name=apache2 update_cache=yes state=latest
-  #you may add your tasks below
+    - name: transfer the setup script
+      copy: src=setup.sh dest=/home mode=0777
+
+    - name: execute the script
+      command: sh /home/setup.sh
+
+    - name: transfer the install script for frontend
+      copy: src=install_frontend.sh dest=/home/mob_app_usr mode=0777
+
+    - name: execute the frontend script for frontend
+      command: sh /home/mob_app_usr/install_frontend.sh
+  
 
 #ansible-playbook -i ansible_aws.ini ansible_playbook.yaml
 #ansible-playbook -i ansible_aws.ini ansible_playbook.yaml
