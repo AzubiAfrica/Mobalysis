@@ -11,8 +11,8 @@ sudo -u postgres -c "ALTER ROLE mob_db_user WITH ENCRYPTED PASSWORD 'mob_db_pass
 #Script to create a mob_app_usr and install a home directory for the user
 
 #add user with a home directory
-sudo useradd mod_app_usr -m
-cd /home/mod_app_usr
+sudo useradd mob_app_usr -m
+cd /home/mob_app_usr
 
 #Script to install python3-venv and create and database mobalytics and set owner to mob_db_user
 
