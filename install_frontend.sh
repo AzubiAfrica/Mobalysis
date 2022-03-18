@@ -36,6 +36,9 @@ sudo systemctl restart nginx
 sudo git clone --branch dev https://github.com/redmicelles/Mobalysis /var/www/html/tmp
 sudo mv /var/www/html/tmp/frontend /var/www/html
 sudo rm -r /var/www/html/tmp
+#Install Dependenies
+sudo cd /var/www/html/frontend
+sudo npm install
 
 # #remove the nginx files 
 # cd /var/www/html 
