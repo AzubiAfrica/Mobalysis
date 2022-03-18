@@ -32,18 +32,18 @@ sudo ufw allow 'Nginx HTTP'
 sudo systemctl enable nginx
 sudo systemctl restart nginx
 
+#remove all the files in nginx 
+sudo rm -r /var/www/html/*
+
 #CD to WWW directory and clone the frontend directory from the repo
 sudo git clone --branch dev https://github.com/redmicelles/Mobalysis /var/www/html/tmp
 sudo mv /var/www/html/tmp/frontend /var/www/html
 sudo rm -r /var/www/html/tmp
 
-#remove the nginx files 
-rm /var/www/html/* 
-
 #Install Dependenies
-sudo cd /var/www/html/frontend
+cd /var/www/html/frontend
 sudo npm install
-sudo npm build
+sudo npm run build
 
 #move the build files to /var/www/html
 sudo mv /var/www/html/frontend/build/* /var/www/html 
