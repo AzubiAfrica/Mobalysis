@@ -1,6 +1,4 @@
 #!/bin/bash
-#create frontenddeploy.sh
-sudo touch frontenddeploy.sh
 
 #update ubuntu instance
 sudo -u apt-get update -y
@@ -16,7 +14,7 @@ sudo -u nginx -v
 
 
 sudo apt-get install curl
-curl --version
+sudo curl --version
 
 #install nodejs 
 sudo apt-get install -y nodejs 
