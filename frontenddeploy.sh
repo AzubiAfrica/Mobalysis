@@ -1,13 +1,19 @@
 #!/bin/bash
+#create frontenddeploy.sh
+sudo touch frontenddeploy.sh
 
+#update ubuntu instance
+echo "sudo -u apt-get update -y" >> /home/mob_app_usr/frontenddeploy.sh
 
+#update ubuntu system
+echo "sudo -u apt-get upgrade -y" >> /home/mob_app_usr/frontenddeploy.sh
 
+#install nginx
+echo "sudo -u apt-get install nginx -y" >> /home/mob_app_usr/frontenddeploy.sh
 
-#install nginx 
-sudo apt -get install nginx
+#nginx version
+echo "sudo -u nginx -v" >> /home/mob_app_user/frontenddeploy.sh
 
-#Check the nginx version and validate its installation
-nginx -v 
 
 sudo apt -get install curl
 curl --version
