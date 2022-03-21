@@ -12,7 +12,7 @@ sudo -u apt-get upgrade -y
 sudo -u apt-get install nginx -y
 
 #nginx version
-echo "sudo -u nginx -v" >> /home/mob_app_user/frontenddeploy.sh
+sudo -u nginx -v
 
 
 sudo apt -get install curl
