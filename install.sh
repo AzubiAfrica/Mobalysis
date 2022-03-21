@@ -10,12 +10,14 @@ sudo  bash -c 'echo "export DBNAME=mobalysis" >> /home/mob_app_usr/.bashrc'
 sudo  bash -c 'echo "export DBHOST=127.0.0.1" >> /home/mob_app_usr/.bashrc'
 sudo  bash -c 'echo "export DBPASS=mobdbpass" >> /home/mob_app_usr/.bashrc'
 sudo  bash -c 'echo "export DBPORT=5432" >> /home/mob_app_usr/.bashrc'
+
+#Execute changes to the current session of the bashrc file
+source .bashrc
+
 sudo -u mob_app_user sh -c 'cd /home/mob_app_user/ && /usr/bin/python3 -m venv .env'
 sudo -u mob_app_user bash -c 'cd /home/mob_app_usr/ && source /home/mob_app_usr/.env/bin/activate && pip3 install -r /home/mob_app_usr/Mobalysis/backend/requirements.txt && python /home/mob_app_user/Mobalysis/backend/manage.py migrate'
 
 
-#Execute changes to the current session of the bashrc file
-source .bashrc
 
 #Script to create a virtual enviroment env, activate virtual enviroment 
 #source/path and install the application packages in the virtusl enviroment
