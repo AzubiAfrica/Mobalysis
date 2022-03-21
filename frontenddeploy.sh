@@ -15,11 +15,11 @@ sudo -u apt-get install nginx -y
 sudo -u nginx -v
 
 
-sudo apt -get install curl
+sudo apt-get install curl
 curl --version
 
 #install nodejs 
-sudo apt -get install -y nodejs 
+sudo apt-get install -y nodejs 
 
 #Deploy the react app inside /var/www/html directory and run it
 sudo cd /var/www/html
