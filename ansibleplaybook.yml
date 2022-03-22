@@ -1,0 +1,7 @@
+---
+- name: setup mobalysis frontend and backend
+  hosts: "*"
+  tasks: 
+    - name: setup backend
+      command: ./setup.sh
+
