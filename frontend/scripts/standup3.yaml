@@ -19,10 +19,9 @@
       ansible.builtin.command: sudo apt-get install -y nodejs
 
     - name: clone repo 
-      ansible.builtin.git: 
-        repo: https://github.com/KoladeA/Mobalysis.git
-        dest: /var/www/html
-      
+      ansible.builtin.command: git clone https://github.com/KoladeA/Mobalysis.git
+      args: 
+        chdir: /var/www/html      
 
     - name: install node modules
       ansible.builtin.command: sudo npm install
