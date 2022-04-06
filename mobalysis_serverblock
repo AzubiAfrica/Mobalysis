@@ -1,0 +1,14 @@
+server {
+    listen 800;
+    server_name ec2-44-203-146-228.compute-1.amazonaws.com;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root /home/mob_app_usr/mobalysis;
+    }
+
+    location / {
+        include         uwsgi_params;
+        uwsgi_pass      unix:/run/uwsgi/mobalysis.sock;
+    }
+}
