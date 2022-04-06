@@ -1,7 +1,7 @@
 all:
   hosts:
     web:
-      ansible_host: 3.84.8.53
+      ansible_host: 44.203.146.228
       ansible_port: 22
       ansible_user: ubuntu
       ansible_ssh_private_key_file: mykeyPair.pem

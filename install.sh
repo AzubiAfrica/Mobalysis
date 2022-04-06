@@ -3,7 +3,7 @@
 sudo -i -u mob_app_usr bash << EOF
 
 #clone mobalysis repo
-git clone https://github.com/redmicelles/Mobalysis
+git clone -b dev https://github.com/redmicelles/Mobalysis
 
 #set Environment Variables
 echo export DBNAME=\'mobalytics\' >> .bashrc
@@ -37,6 +37,12 @@ python3 ~/Mobalysis/backend/manage.py makemigrations
 
 #migrate django models
 python3 ~/Mobalysis/backend/manage.py migrate
+
+#update the settings.py 
+sed -i 's/'*'/'ec2-44-203-146-228.compute-1.amazonaws.com'/g' ~/Mobalysis/backend/backend/settings.py 
+echo "STATIC_ROOT = os.path.join(BASE_DIR, 'static/')" >> ~/Mobalysis/backend/backend/settings.py
+
+python3 ~/Mobalysis/backend/manage.py collectstatic
 
 #make directory for uwsgi
 sudo mkdir -p /etc/uwsgi/sites
