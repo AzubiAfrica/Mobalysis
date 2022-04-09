@@ -12,21 +12,33 @@ echo export DBPASS=\'mob_db_pass\' >> .bashrc
 echo export DBHOST=\'localhost\' >> .bashrc
 echo export DBPORT=\'5432\' >> .bashrc
 
+#install env
+sudo apt-get install -y python3-venv
 #create and activate venv
 python3 -m venv ~/Mobalysis/venv
 .  ~/Mobalysis/venv/bin/activate
 
 #install pip
-sudo apt install -y python3-pip
+sudo apt-get install -y python3-pip
 
-#install uwsgi
-sudo -H pip3 install uwsgi
-
-#pip install requirements
-pip3 install -r ~/Mobalysis/backend/requirements.txt
+#update the settings.py 
+sed -i 's/'*'/'ec2-18-215-156-51.compute-1.amazonaws.com'/g' ~/Mobalysis/backend/backend/settings.py 
+echo "STATIC_ROOT = os.path.join(BASE_DIR, 'static/')" >> ~/Mobalysis/backend/backend/settings.py
 
 #create user
 sudo -u postgres createuser mob_app_usr
+
+#install a different version of python 
+sudo apt-get install python3.8-dev 
+
+#install a different version of python 
+sudo apt-get install gcc 
+
+#install uwsgi
+sudo pip3 install uwsgi
+
+#pip install requirements
+sudo pip3 install -r ~/Mobalysis/backend/requirements.txt
 
 #remove old migration 
 cd /home/mob_app_usr/Mobalysis/backend/api/migrations
@@ -38,32 +50,38 @@ python3 ~/Mobalysis/backend/manage.py makemigrations
 #migrate django models
 python3 ~/Mobalysis/backend/manage.py migrate
 
-#update the settings.py 
-sed -i 's/'*'/'ec2-44-203-146-228.compute-1.amazonaws.com'/g' ~/Mobalysis/backend/backend/settings.py 
-echo "STATIC_ROOT = os.path.join(BASE_DIR, 'static/')" >> ~/Mobalysis/backend/backend/settings.py
-
+#migrate static to the static folder created 
 python3 ~/Mobalysis/backend/manage.py collectstatic
 
-#make directory for uwsgi
-sudo mkdir -p /etc/uwsgi/sites
-sudo touch /etc/uwsgi/sites/mobalysis.ini 
-sudo cp ~/Mobalysis/uswgi_config.ini /etc/uwsgi/sites/mobalysis.ini
-
-#make a systemd unitfile for uWSGI
-sudo touch /etc/systemd/system/uwsgi.service
-sudo cp ~/Mobalysis/uwsgi.service /etc/systemd/system/uwsgi.service
+#create directory for the media files
+sudo mkdir /home/mob_app_usr/Mobalysis/backend/media
 
 #create server block configuration files 
 sudo touch /etc/nginx/sites-available/mobalysis
 sudo cp ~/Mobalysis/mobalysis_serverblock /etc/nginx/sites-available/mobalysis
 
-#create a symbolic link 
-sudo ln -s /etc/nginx/sites-available/mobalysis /etc/nginx/sites-enabled
+#create add uwsgi_params 
+sudo touch ~/Mobalysis/backend/uwsgi_params 
+sudo cp ~/Mobalysis/uwsgi_params ~/Mobalysis/backend/uwsgi_params
+
+#create a symbolic link for nginx to server the backend
+sudo ln -s /etc/nginx/sites-available/mobalysis /etc/nginx/sites-enabled/
+
+#
+sudo mkdir /home/mob_app_usr/env/env/vassals
+sudo ln -s /etc/nginx/sites-available/mobalysis /home/mob_app_usr/env/env/vassals 
+
+#make directory for uwsgi
+sudo mkdir -p /etc/uwsgi/sites
+sudo touch /etc/uwsgi/sites/mobalysis.ini 
+sudo cp ~/Mobalysis/mobalysis_uwsgi.ini /etc/uwsgi/sites/mobalysis.ini
+
+#make a systemd unitfile for uWSGI
+sudo touch /etc/systemd/system/uwsgi.service
+sudo cp ~/Mobalysis/uwsgi.service /etc/systemd/system/uwsgi.service
 
 sudo systemctl restart nginx
 sudo systemctl start uwsgi
-
-sudo ufw allow 'Nginx Full'
 
 #start automatically at boot 
 sudo systemctl enable nginx

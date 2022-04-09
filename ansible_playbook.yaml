@@ -16,8 +16,8 @@
     - name: execute the frontend script for frontend
       command: sh /home/mob_app_usr/install_frontend.sh
 
-    - name: transfer the backend script 
-      copy: src=install.sh dest=/home/mob_app_usr mode=0777
+    # - name: transfer the backend script 
+    #   copy: src=install.sh dest=/home/mob_app_usr mode=0777
 
     # - name: execute the backend script
     #   command: sh /home/mob_app_usr/install.sh

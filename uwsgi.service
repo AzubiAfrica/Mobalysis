@@ -1,9 +1,11 @@
 [Unit]
 Description=uWSGI Emperor service
+After=network.target
 
 [Service]
-ExecStart=/usr/local/bin/uwsgi --emperor /etc/uwsgi/sites
+User=mob_app_usr
 Restart=always
+ExecStart=/home/mob_app_usr/env/env/bin/uwsgi --emperor /home/mob_app_usr/env/env/vassals --uid www-data --gid www-data
 RuntimeDirectory=uwsgi
 KillSignal=SIGQUIT
 Type=notify

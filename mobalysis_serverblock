@@ -1,14 +1,26 @@
+upstream django{
+    server unix:///home/mob_app_usr/Mobalysis/backend/backend.sock;
+}
 server {
-    listen 8000;
-    server_name ec2-44-203-146-228.compute-1.amazonaws.com;
+    listen 8080;
+    server_name  ec2-18-215-156-51.compute-1.amazonaws.com www.ec2-18-215-156-51.compute-1.amazonaws.com;
+    charset utf-8; 
 
     location = /favicon.ico { access_log off; log_not_found off; }
+
+    #serve static files 
     location /static/ {
-        root /home/mob_app_usr/mobalysis;
+        root /home/mob_app_usr/Mobalysis/backend/static;
     }
 
+    #serve media files 
+    location /media/ {
+        root /home/mob_app_usr/Mobalysis/backend/media;
+    }
+
+    #serve others
     location / {
-        include         uwsgi_params;
-        uwsgi_pass      unix:/run/uwsgi/mobalysis.sock;
+        include         /home/mob_app_usr/Mobalysis/backend/uwsgi_params;
+        uwsgi_pass      django;
     }
 }

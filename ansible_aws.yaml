@@ -1,10 +1,10 @@
 all:
   hosts:
     web:
-      ansible_host: 44.203.146.228
+      ansible_host: 18.215.156.51
       ansible_port: 22
       ansible_user: ubuntu
-      ansible_ssh_private_key_file: mykeyPair.pem
+      ansible_ssh_private_key_file: myKeyPair.pem
 
 #ansible web -i aws.yaml -m ping
 #ansible web -i aws.yaml -m ping
