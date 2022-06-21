@@ -470,12 +470,12 @@
         "model": "api.summoner",
         "pk": "t6p5cpcSyGcFUHoAL2U7UcWQfiGSCqPlPABfb4-i8awBiMK",
         "fields": {
-            "accountId": "fQkyRsN13VRUSuUmzXyygXoPYb1hGhXztaofQ2lSuL9p8CQ",
+            "accountid": "fQkyRsN13VRUSuUmzXyygXoPYb1hGhXztaofQ2lSuL9p8CQ",
             "puuid": "S6s3-7D41voDzW7OUl8jmO0FITPIuIZe42RCtWk9xejVFda5VBkuhN9yLehPQIp3bGhHNaETbWWNpl",
             "name": "말랑말랑한발바닥",
-            "profileIconId": 5036,
-            "revisionDate": "2021-09-07T17:35:01.793Z",
-            "summonerLevel": 114
+            "profileiconid": 5036,
+            "revisiondate": "2021-09-07T17:35:01.793Z",
+            "summonerlevel": 114
         }
     },
     {
@@ -485,21 +485,21 @@
             "accountId": "fQkyRsN13VRUSuUmzXyygXoPYb1hGhXztaofQ2lSuL9p8CQ",
             "puuid": "S6s3-7D41voDzW7OUl8jmO0FITPIuIZe42RCtWk9xejVFda5VBkuhN9yLehPQIp3bGhHNaETbWWNpg",
             "name": "내나이가어때소",
-            "profileIconId": 508,
-            "revisionDate": "2021-09-07T19:19:04.054Z",
-            "summonerLevel": 117
+            "profileiconid": 508,
+            "revisiondate": "2021-09-07T19:19:04.054Z",
+            "summonerlevel": 117
         }
     },
     {
         "model": "api.summoner",
         "pk": "t6p5cpcSyGcFUHoAL2U7UcWQfiGSCqPlPABfb4-i8awBiMP",
         "fields": {
-            "accountId": "fQkyRsN13VRUSuUmzXyygXoPYb1hGhXztaofQ2lSuL9p8CQ",
+            "accountid": "fQkyRsN13VRUSuUmzXyygXoPYb1hGhXztaofQ2lSuL9p8CQ",
             "puuid": "S6s3-7D41voDzW7OUl8jmO0FITPIuIZe42RCtWk9xejVFda5VBkuhN9yLehPQIp3bGhHNaETbWWNpp",
             "name": "WildTurtle",
-            "profileIconId": 508,
-            "revisionDate": "2021-09-07T19:15:43.253Z",
-            "summonerLevel": 116
+            "profileiconid": 508,
+            "revisiondate": "2021-09-07T19:15:43.253Z",
+            "summonerlevel": 116
         }
     },
     
@@ -608,7 +608,7 @@
         "fields": {
             "gameId": "5405656552",
             "championId": "48",
-            "tierId":"MASTER",
+            "tier":"MASTER",
             "summonerId":  "t6p5cpcSyGcFUHoAL2U7UcWQfiGSCqPlPABfb4-i8awBiMP",
             "champLevel": 18,
             "win": 1,
@@ -628,7 +628,7 @@
         "fields": {
             "gameId": "5405656552",
             "championId": "43",
-            "tierId": "BRONZE",
+            "tier": "BRONZE",
             "summonerId": "t6p5cpcSyGcFUHoAL2U7UcWQfiGSCqPlPABfb4-i8awBiMK",
             "champLevel": 16,
             "win": 1,
@@ -648,7 +648,7 @@
         "fields": {
             "gameId": "5405656552",
             "championId": "7",
-            "tierId": "BRONZE",
+            "tier": "BRONZE",
             "summonerId":"t6p5cpcSyGcFUHoAL2U7UcWQfiGSCqPlPABfb4-i8awBiMM",
             "champLevel": 16,
             "win": 1,
@@ -668,7 +668,7 @@
         "fields": {
             "gameId": "5405656552",
             "championId": "11",
-            "tierId": "SILVER",
+            "tier": "SILVER",
             "summonerId":  "t6p5cpcSyGcFUHoAL2U7UcWQfiGSCqPlPABfb4-i8awBiMP",
             "champLevel": 18,
             "win": 1,
@@ -688,7 +688,7 @@
         "fields": {
             "gameId": "5405656552",
             "championId": "38",
-            "tierId": "BRONZE",
+            "tier": "BRONZE",
             "summonerId": "t6p5cpcSyGcFUHoAL2U7UcWQfiGSCqPlPABfb4-i8awBiMP",
             "champLevel": 18,
             "win": 1,
@@ -708,7 +708,7 @@
         "fields": {
             "gameId": "5405656553",
             "championId": "48",
-            "tierId":"GOLD",
+            "tier":"GOLD",
             "summonerId": "t6p5cpcSyGcFUHoAL2U7UcWQfiGSCqPlPABfb4-i8awBiMP",
             "champLevel": 18,
             "win": 1,
@@ -728,7 +728,7 @@
         "fields": {
             "gameId": "5405656553",
             "championId": "43",
-            "tierId":"PLATINUM",
+            "tier":"PLATINUM",
             "summonerId": "t6p5cpcSyGcFUHoAL2U7UcWQfiGSCqPlPABfb4-i8awBiMK",
             "champLevel": 16,
             "win": 1,
@@ -748,7 +748,7 @@
         "fields": {
             "gameId": "5405656553",
             "championId": "7",
-            "tierId":"PLATINUM",
+            "tier":"PLATINUM",
             "summonerId": "t6p5cpcSyGcFUHoAL2U7UcWQfiGSCqPlPABfb4-i8awBiMM",
             "champLevel": 16,
             "win": 1,
@@ -768,7 +768,7 @@
         "fields": {
             "gameId": "5405656553",
             "championId": "11",
-            "tierId":"DIAMOND",
+            "tier":"DIAMOND",
             "summonerId": "t6p5cpcSyGcFUHoAL2U7UcWQfiGSCqPlPABfb4-i8awBiMM",
             "champLevel": 18,
             "win": 1,
@@ -788,7 +788,7 @@
         "fields": {
             "gameId": "5405656553",
             "championId": "38",
-            "tierId": "PLATINUM",
+            "tier": "PLATINUM",
             "summonerId": "t6p5cpcSyGcFUHoAL2U7UcWQfiGSCqPlPABfb4-i8awBiMP",
             "champLevel": 18,
             "win": 1,
@@ -1034,7 +1034,7 @@
         "model": "api.item_property",
         "pk": 1,
         "fields": {
-            "itemId": "1055",
+            "itemId": "1004",
             "attribute_name": "STARTER",
             "attribute_value": {
                 "Health": "+80",
@@ -1046,7 +1046,7 @@
         "model": "api.item_property",
         "pk": 2,
         "fields": {
-            "itemId": "3006",
+            "itemId": "1006",
             "attribute_name": "BOOTS",
             "attribute_value": {
                 "Attack speed": "+35%",
