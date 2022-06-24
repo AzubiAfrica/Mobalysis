@@ -482,7 +482,7 @@
         "model": "api.summoner",
         "pk": "t6p5cpcSyGcFUHoAL2U7UcWQfiGSCqPlPABfb4-i8awBiMM",
         "fields": {
-            "accountId": "fQkyRsN13VRUSuUmzXyygXoPYb1hGhXztaofQ2lSuL9p8CQ",
+            "accountid": "fQkyRsN13VRUSuUmzXyygXoPYb1hGhXztaofQ2lSuL9p8CQ",
             "puuid": "S6s3-7D41voDzW7OUl8jmO0FITPIuIZe42RCtWk9xejVFda5VBkuhN9yLehPQIp3bGhHNaETbWWNpg",
             "name": "내나이가어때소",
             "profileiconid": 508,
