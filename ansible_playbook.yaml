@@ -1,0 +1,28 @@
+---
+- hosts: web
+  remote_user: root
+  become: yes
+
+  tasks:
+    - name: transfer the setup script
+      copy: src=setup.sh dest=/home mode=0777
+
+    - name: execute the script
+      command: sh /home/setup.sh
+
+    - name: transfer the install script for frontend
+      copy: src=install_frontend.sh dest=/home/mob_app_usr mode=0777
+
+    - name: execute the frontend script for frontend
+      command: sh /home/mob_app_usr/install_frontend.sh
+
+    # - name: transfer the backend script 
+    #   copy: src=install.sh dest=/home/mob_app_usr mode=0777
+
+    # - name: execute the backend script
+    #   command: sh /home/mob_app_usr/install.sh
+
+  
+
+#ansible-playbook -i ansible_aws.ini ansible_playbook.yaml
+#ansible-playbook -i ansible_aws.ini ansible_playbook.yaml
